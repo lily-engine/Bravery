@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /app.py
+  - source: /index.html
     destination: /var/www/myapp/
 hooks:
   BeforeInstall:
