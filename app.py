@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from app import app
 
 app = Flask(__name__)
 
@@ -10,3 +11,7 @@ def index():
         message = '学習済の項目にチェックを入れてください。',
         question_lists = question_lists
     )
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
