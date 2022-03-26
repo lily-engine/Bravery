@@ -1,4 +1,5 @@
-config
+config/__pycache__
+config/nginx.conf
 .venv
 venv/
 
