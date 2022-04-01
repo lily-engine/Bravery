@@ -1,15 +1,15 @@
-config/__pycache__
-config/nginx.conf
+app/config/__pycache__
+app/config/nginx.conf
 .venv
 venv/
+.env
 
-__pycache__/
+app/__pycache__
 *.py[cod]
 *$py.class
 
 .python-version
 
 app.service
-*.txt
 *.log
 .DS_Store
