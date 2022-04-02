@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     question_lists = ["HTML","CSS","JavaScript","JavaScriptのフレームワーク","バックエンドの言語","バックエンド言語のフレームワーク","Linux","Git/GitHub","Webの仕組み","MySQL/SQL","ポートフォリオ作成"]
     return render_template('view.html',
-        title = '目指せバックエンドエンジニア！学習到達度チェッカー',
-        message = '学習済の項目にチェックを入れてください。学習の到達度を判定します！',
+        title = 'ぴよぴよエンジニア診断🐣',
+        message = 'バックエンドエンジニアになりたい人向け、学習項目のチェックリストです。学習済の項目にチェックを入れると、学習の到達度を判定します。',
         question_lists = question_lists
     )
 
