@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/bravery
+  - source: /app
+    destination: /var/www/bravery/app
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
