@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}ぴよぴよエンジニア診断{% endblock %}
+{% block content %}
+    <h1>{{title}}</h1>
+    <p>{{ message }}</p>
+                
+    {% for question_list in question_lists %}
+        <div>
+            <input type="checkbox" id="checkbox" name="question_list">
+            <label for="question_list">{{ question_list }}</label>
+        </div>
+    {% endfor %}
+
+    <button class="diganose" type="button">
+        診断する
+    </button>
+{% endblock %}
