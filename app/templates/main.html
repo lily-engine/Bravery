@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block title %}ぴよぴよエンジニア診断{% endblock %}
 {% block content %}
-<section class="main p-5">
-    <div class="container">
         <p class="main-copy">未経験からエンジニアになる人向け<br>
         学習項目チェックリスト
         </p>
@@ -21,6 +19,4 @@
         そんな悩みを解決します！</p>
 
         <button class="diagnose m-5"><a href="{{ url_for('get') }}">今すぐ無料診断</a></button>
-    </div>
-</section>
 {% endblock %}
