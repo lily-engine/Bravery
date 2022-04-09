@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, redirect
 
 app = Flask(__name__)
 
 @app.route('/')
 def main():
-	return render_template('main.html', title = 'ぴよぴよエンジニア診断')
+	return render_template('main.html')
 
 @app.route('/question', methods=['GET'])
 def get():

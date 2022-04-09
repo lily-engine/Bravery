@@ -1,6 +1,26 @@
 {% extends "base.html" %}
 {% block title %}ぴよぴよエンジニア診断{% endblock %}
 {% block content %}
-    <h1>{{ title }}</h1>
-    <a href="{{ url_for('get') }}">診断するよ！</a>
+<section class="main p-5">
+    <div class="container">
+        <p class="main-copy">未経験からエンジニアになる人向け<br>
+        学習項目チェックリスト
+        </p>
+        <div class="title-area m-4">
+            <h1 class="title m-5">ぴよぴよエンジニア診断🐣</h1>
+            <!-- <img src="./img/logo_image.png" alt="ぴよぴよエンジニア診断" class="logo_image"> -->
+        </div>
+
+        <div class="subcopy m-3">
+            <p class="see">たった1分でわかる</p>
+        </div>
+
+        <h2>あなたの学習到達度と、今後の学習項目</h2>
+
+        <p class="mt-5 mb-3">勉強しているけれど、次に何をやっていいのか分からない……<br>
+        そんな悩みを解決します！</p>
+
+        <button class="diagnose m-5"><a href="{{ url_for('get') }}">今すぐ無料診断</a></button>
+    </div>
+</section>
 {% endblock %}

@@ -1,18 +1,120 @@
 body {
-    margin: 10px;
-    background-color: aliceblue;
+    color: #303030;
+    line-height: 1.5;
+    height: 100%;
+    margin: 0px;
+    padding: 0px ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* ===========================
+header
+============================ */
+
+header {
+    display: flex; 
+    height: 60px;
+}
+
+/* ===========================
+main
+============================ */
+
+.main {
+    background-image:url(../img/background.png);
+    background-size: cover;
+    height: 716px;
+    text-align: center;
+}
+
+.main-copy {
+    font-size: 22px;
 }
 
 h1 {
-    color: lightsteelblue;
-    font-size: 36pt;
-    margin: 0px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
 }
 
-p {
-    font-size: 14pt;
+.logo_image {
+    height: 62px;
+    width: 62px;
 }
 
-#app {
-    text-align: left;
+.main-title {
+    display: block;
+}
+
+/* .title-area {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+} */
+
+/* .title {
+    float: left;
+}
+
+.logo_image {
+    float: right;
+} */
+
+.see {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #3B4FFF;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 22px;
+    width: 276px;
+    height: 58px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================
+footer
+============================ */
+
+footer {
+    height: 52px;
+}
+
+.icons {
+    float: left;
+    line-height: 52px;
+}
+
+.copyright {
+    float: right;
+    line-height: 52px;
 }
