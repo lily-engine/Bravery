@@ -1,16 +1,26 @@
-from crypt import methods
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, request, url_for
 
 app = Flask(__name__)
 
-@app.route('/', methods=["GET","POST"])
+@app.route('/')
 def main():
-    question_lists = ["HTML","CSS","JavaScript","JavaScriptのフレームワーク","バックエンドの言語","バックエンド言語のフレームワーク","Linux","Git/GitHub","Webの仕組み","MySQL/SQL","ポートフォリオ作成"]
-    return render_template('index.html',
-        title = 'ぴよぴよエンジニア診断🐣',
-        message = 'バックエンドエンジニアになりたい人向け、学習項目のチェックリストです。学習済の項目にチェックを入れると、学習の到達度を判定します。',
-        question_lists = question_lists
-    )
+	return render_template('main.html', title = 'ぴよぴよエンジニア診断')
+
+@app.route('/question', methods=['GET'])
+def get():
+	question_lists = ["HTML","CSS","JavaScript","JavaScriptのフレームワーク","バックエンドの言語","バックエンド言語のフレームワーク","Linux","Git/GitHub","Webの仕組み","MySQL/SQL","ポートフォリオ作成"]
+	return render_template('question.html', \
+		title = '診断するよ', \
+		message = 'どの勉強が終わっている？',
+		question_lists = question_lists
+	)
+
+@app.route('/result', methods=['POST'])
+def post():
+	name = request.form.getlist('checkbox')
+	return render_template('result.html', \
+		title = '診断結果', \
+		message = '{}の勉強が終わっているんですね！'.format('と'.join(name)))
 
 @app.route('/terms')
 def terms_of_service():

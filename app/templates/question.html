@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ title }}</h1>
+<p>{{ message }}</p>
+<form action="{{ url_for('post') }}" method="POST" enctype="multipart/form-data">
+    <div>
+        <input type="checkbox" id="ck1" name="checkbox" value="{{ question_lists[0] }}">
+        <label for="ck1">{{ question_lists[0] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck2" name="checkbox" value="{{ question_lists[1] }}">
+        <label for="ck2">{{ question_lists[1] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck3" name="checkbox" value="{{ question_lists[2] }}">
+        <label for="ck3">{{ question_lists[2] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck4" name="checkbox" value="{{ question_lists[3] }}">
+        <label for="ck4">{{ question_lists[3] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck5" name="checkbox" value="{{ question_lists[4] }}">
+        <label for="ck5">{{ question_lists[4] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck6" name="checkbox" value="{{ question_lists[5] }}">
+        <label for="ck6">{{ question_lists[5] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck7" name="checkbox" value="{{ question_lists[6] }}">
+        <label for="ck7">{{ question_lists[6] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck8" name="checkbox" value="{{ question_lists[7] }}">
+        <label for="ck8">{{ question_lists[7] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck9" name="checkbox" value="{{ question_lists[8] }}">
+        <label for="ck9">{{ question_lists[8] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck10" name="checkbox" value="{{ question_lists[9] }}">
+        <label for="ck10">{{ question_lists[9] }}</label>
+    </div>
+    <div>
+        <input type="checkbox" id="ck11" name="checkbox" value="{{ question_lists[10] }}">
+        <label for="ck11">{{ question_lists[10] }}</label>
+    </div>
+    <div>
+        <input type="submit" value="送信">
+    </div>
+</form>
+
+{% endblock %}
