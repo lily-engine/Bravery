@@ -10,17 +10,19 @@ def main():
 def get():
 	question_lists = ["HTML","CSS","JavaScript","JavaScriptのフレームワーク","バックエンドの言語","バックエンド言語のフレームワーク","Linux","Git/GitHub","Webの仕組み","MySQL/SQL","ポートフォリオ作成"]
 	return render_template('question.html', \
-		title = '診断するよ', \
-		message = 'どの勉強が終わっている？',
+		title = '診断してみよう！', \
+		message = '勉強したことがある項目を選択してね（自己判断でOK！）',
 		question_lists = question_lists
 	)
 
 @app.route('/result', methods=['POST'])
 def post():
-	name = request.form.getlist('checkbox')
+	checkbox = request.form.getlist('checkbox')
+	checkbox_count = len(checkbox)
+
 	return render_template('result.html', \
 		title = '診断結果', \
-		message = '{}の勉強が終わっているんですね！'.format('と'.join(name)))
+		checkbox_count = checkbox_count)
 
 @app.route('/terms')
 def terms_of_service():

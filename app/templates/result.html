@@ -3,6 +3,7 @@
 {% block content %}
 
 <h1>{{ title }}</h1>
-<p>{{ message }}</p>
+
+<h2>あなたの勉強の進捗は{{ (checkbox_count / 11 * 100) | round | int }}%です！</h2>
 
 {% endblock %}
