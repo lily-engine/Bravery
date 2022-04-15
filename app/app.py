@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
+import model
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ def main():
 
 @app.route('/question', methods=['GET'])
 def get():
-	question_lists = ["HTML","CSS","JavaScript","JavaScriptのフレームワーク","バックエンドの言語","バックエンド言語のフレームワーク","Linux","Git/GitHub","Webの仕組み","MySQL/SQL","ポートフォリオ作成"]
+	question_lists = model.question_info()
 	return render_template('question.html', \
 		title = '診断してみよう！', \
 		message = '勉強したことがある項目を選択してね（自己判断でOK！）',

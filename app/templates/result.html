@@ -4,6 +4,8 @@
 
 <h1>{{ title }}</h1>
 
-<h2>あなたの勉強の進捗は{{ (checkbox_count / 11 * 100) | round | int }}%です！</h2>
+<h2>あなたの勉強の進捗は{{ (checkbox_count / 10 * 100) | round | int }}%です！</h2>
+
+<!-- <input type="button" onclick="window.history.back();" value="トップ画面に戻る"> -->
 
 {% endblock %}

@@ -3,6 +3,8 @@ app/config/nginx.conf
 .venv
 venv/
 .env
+.txt
+app/.txt
 
 app/__pycache__
 *.py[cod]
@@ -13,3 +15,5 @@ app/__pycache__
 app.service
 *.log
 .DS_Store
+
+model.py
