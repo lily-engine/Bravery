@@ -203,11 +203,23 @@ footer {
     line-height: 52px;
 }
 
+.icons {
+    float: left;
+    line-height: 52px;
+    margin-left: 150px;
+
+}
+
 /* ===========================
 スマホ版
 ============================ */
 
 @media only screen and (max-width: 1250px) {
+
+    .clear::after {
+        content: none !important;
+    }
+
     /* ===========================
     common
     ============================ */
@@ -216,6 +228,10 @@ footer {
         font-size: 28px;
     }
 
+    .icons {
+        float: none;
+        margin: 0 auto;
+    }
 
     .checklists {
         display: flex;
