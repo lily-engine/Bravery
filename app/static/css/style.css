@@ -116,11 +116,6 @@ button a {
     font-weight: 800;
 }
 
-.dm-5 a:hover {
-    text-decoration: none;
-    color: white;
-}
-
 .title a:hover {
     text-decoration: none;
     color: black;
