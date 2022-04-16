@@ -13,3 +13,6 @@ app/__pycache__
 app.service
 *.log
 .DS_Store
+
+model.py
+mysql.txt
