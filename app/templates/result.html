@@ -1,9 +1,40 @@
 {% extends "base.html" %}
-{% block title %}ぴよぴよエンジニア診断結果{% endblock %}
+{% block title %}ぴよぴよエンジニア診断{% endblock %}
 {% block content %}
+<header>
+    <div class="container header">
+        <div class="header-left">
+            <p class="title"><a href="main.html">ぴよぴよエンジニア診断🐥</a></p>
+        </div>
+    </div>
+</header>
 
-<h1>{{ title }}</h1>
+<section class="main p-5">
+    <div class="container">
+        <h1>{{ title }}</h1>
 
-<h2>あなたの勉強の進捗は{{ (checkbox_count / 10 * 100) | round | int }}%です！</h2>
+        <h2 class="m-5">あなたの勉強の進捗は<span class="tweet-text" id="tweet-text">{{ percentage }}</span>%です！</h2>
 
-{% endblock %}brew services restart nginx
+        {% if checkbox_count == 0 %}
+            <p class="result_text">まずは【Webの仕組み】を勉強してみよう！</p>
+        {% else %}
+            <p class="result_text">あなたが勉強したのは、以下の{{ checkbox_count }}項目ですね！</p>
+            <ul>
+                {% for checkbox in checkbox %}
+                <li class="personal_result">{{ checkbox }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <h3 class="advice m-5">プログラミング学習は継続が第一！<br>
+        ぴよぴよエンジニア卒業を目指して頑張ろう🐓</h3>
+
+        <div class="tweet" id="tweet">
+            <button id="twitter-share-button"><i class="fab fa-twitter"></i>ツイートする</button>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <script type="text/javascript" src="../static/js/script.js"></script>
+    </div>
+</section>
+{% endblock %}

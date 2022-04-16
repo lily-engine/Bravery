@@ -1,53 +1,66 @@
 {% extends "base.html" %}
-{% block title %}ぴよぴよエンジニア診断中{% endblock %}
+{% block title %}ぴよぴよエンジニア診断{% endblock %}
 {% block content %}
+<header>
+    <div class="container header">
+        <div class="header-left">
+            <p class="title"><a href="main.html">ぴよぴよエンジニア診断🐥</a></p>
+        </div>
+    </div>
+</header>
 
-<h1>{{ title }}</h1>
-<p>{{ message }}</p>
-<form action="{{ url_for('post') }}" method="POST" enctype="multipart/form-data">
-    <div>
-        <input type="checkbox" id="ck1" name="checkbox" value="{{ question_lists[0] }}">
-        <label for="ck1">{{ question_lists[0] }}</label>
+<section class="main p-5">
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <p class="message mt-3">{{ message }}</p>
+        <p class="advice m-3">自分のための進捗チェックなので、自己判断でOK！今後の勉強に活かしてみよう。</p>
+        <form action="{{ url_for('post') }}" method="POST" enctype="multipart/form-data">
+            <div class="lists">
+                <div class="checklists">
+                    <input type="checkbox" id="ck1" name="checkbox" value="{{ question_lists[0] }}">
+                    <label for="ck1" class="list">{{ question_lists[0] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck2" name="checkbox" value="{{ question_lists[1] }}">
+                    <label for="ck2" class="list">{{ question_lists[1] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck3" name="checkbox" value="{{ question_lists[2] }}">
+                    <label for="ck3" class="list">{{ question_lists[2] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck4" name="checkbox" value="{{ question_lists[3] }}">
+                    <label for="ck4" class="list">{{ question_lists[3] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck5" name="checkbox" value="{{ question_lists[4] }}">
+                    <label for="ck5" class="list">{{ question_lists[4] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck6" name="checkbox" value="{{ question_lists[5] }}">
+                    <label for="ck6" class="list">{{ question_lists[5] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck7" name="checkbox" value="{{ question_lists[6] }}">
+                    <label for="ck7" class="list">{{ question_lists[6] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck8" name="checkbox" value="{{ question_lists[7] }}">
+                    <label for="ck8" class="list">{{ question_lists[7] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck9" name="checkbox" value="{{ question_lists[8] }}">
+                    <label for="ck9" class="list">{{ question_lists[8] }}</label>
+                </div>
+                <div class="checklists">
+                    <input type="checkbox" id="ck10" name="checkbox" value="{{ question_lists[9] }}">
+                    <label for="ck10" class="list">{{ question_lists[9] }}</label>
+                </div>
+            </div>            
+            <div>
+                <input class="button m-4" type="submit" value="診断する！">
+            </div>
+        </form>
     </div>
-    <div>
-        <input type="checkbox" id="ck2" name="checkbox" value="{{ question_lists[1] }}">
-        <label for="ck2">{{ question_lists[1] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck3" name="checkbox" value="{{ question_lists[2] }}">
-        <label for="ck3">{{ question_lists[2] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck4" name="checkbox" value="{{ question_lists[3] }}">
-        <label for="ck4">{{ question_lists[3] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck5" name="checkbox" value="{{ question_lists[4] }}">
-        <label for="ck5">{{ question_lists[4] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck6" name="checkbox" value="{{ question_lists[5] }}">
-        <label for="ck6">{{ question_lists[5] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck7" name="checkbox" value="{{ question_lists[6] }}">
-        <label for="ck7">{{ question_lists[6] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck8" name="checkbox" value="{{ question_lists[7] }}">
-        <label for="ck8">{{ question_lists[7] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck9" name="checkbox" value="{{ question_lists[8] }}">
-        <label for="ck9">{{ question_lists[8] }}</label>
-    </div>
-    <div>
-        <input type="checkbox" id="ck10" name="checkbox" value="{{ question_lists[9] }}">
-        <label for="ck10">{{ question_lists[9] }}</label>
-    </div>
-    <div>
-        <input type="submit" value="送信">
-    </div>
-</form>
-
+</section>
 {% endblock %}

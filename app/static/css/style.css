@@ -1,14 +1,17 @@
+/* ===========================
+common
+============================ */
 body {
     color: #303030;
     line-height: 1.5;
     height: 100%;
     margin: 0px;
     padding: 0px ;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 .container {
-    width: 90%;
+    width: 60%;
     max-width: 980px;
     margin: auto;
 }
@@ -20,11 +23,22 @@ img {
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: black;
 }
 
 a:hover {
     opacity: 0.7;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 62px;
+}
+
+p {
+    text-align: center;
 }
 
 /* ===========================
@@ -44,17 +58,10 @@ main
     background-image:url(../img/background.png);
     background-size: cover;
     height: 716px;
-    text-align: center;
 }
 
 .main-copy {
     font-size: 22px;
-}
-
-h1 {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 62px;
 }
 
 .logo_image {
@@ -66,20 +73,6 @@ h1 {
     display: block;
 }
 
-/* .title-area {
-    display: flex;
-    text-align: center;
-    margin: 0 auto;
-} */
-
-/* .title {
-    float: left;
-}
-
-.logo_image {
-    float: right;
-} */
-
 .see {
     font-size: 22px;
     font-weight: 400;
@@ -88,6 +81,7 @@ h1 {
 h2 {
     font-size: 32px;
     font-weight: bold;
+    text-align: center;
 }
 
 button {
@@ -99,6 +93,76 @@ button {
     height: 58px;
     border-radius: 50px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.button {
+    background-color: #3B4FFF;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 22px;
+    width: 276px;
+    height: 58px;
+    border-radius: 50px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+button {
+    margin: 0 auto;
+}
+
+button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.title {
+    font-size: 18px;
+}
+
+/* ===========================
+question
+============================ */
+
+.message {
+    font-size: 20px;
+}
+
+/* .lists {
+    position: absolute;
+} */
+/* 
+.checklists {
+    position: relative;
+    left: 200px;
+} */
+
+.list {
+    font-size: 24px;
+}
+
+input[type=checkbox] {
+	transform: scale(2.5);
+	margin: 0 15px 12px 0;
+}
+
+/* ===========================
+answer
+============================ */
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.result_text {
+    font-size: 24px;
+}
+
+.personal_result {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* ===========================
