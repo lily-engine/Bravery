@@ -13,26 +13,33 @@
     <div class="container">
         <h1>{{ title }}</h1>
 
-        <h2 class="m-5">あなたの勉強の進捗は<span class="tweet-text" id="tweet-text">{{ percentage }}</span>%です！</h2>
+        <h2 class="answer">あなたの勉強の進捗は<span class="tweet-text" id="tweet-text">{{ percentage }}</span>%です！</h2>
 
         {% if checkbox_count == 0 %}
             <p class="result_text">まずは【Webの仕組み】を勉強してみよう！</p>
+        {% elif checkbox_count == 10 %} 
+            <ul class="mb-3">
+                {% for checkbox in checkbox %}
+                <li class="personal_result">{{ checkbox }}</li>
+                {% endfor %}
+            </ul>      
+            <p class="result_text m-3">{{ checkbox_count }}項目も勉強したあなたは、立派なぴよぴよエンジニア🐥</p>
+            <p class="result_text mb-3">次はポートフォリオをつくろう！</p>       
         {% else %}
-            <p class="result_text">あなたが勉強したのは、以下の{{ checkbox_count }}項目ですね！</p>
-            <ul>
+            <ul class="mb-3">
                 {% for checkbox in checkbox %}
                 <li class="personal_result">{{ checkbox }}</li>
                 {% endfor %}
             </ul>
+            <p class="result_text m-3">{{ checkbox_count }}項目を勉強したあなたは、修行中のぴよぴよエンジニア🐣</p>
         {% endif %}
 
-        <h3 class="advice m-5">プログラミング学習は継続が第一！<br>
-        ぴよぴよエンジニア卒業を目指して頑張ろう🐓</h3>
-
-        <div class="tweet" id="tweet">
-            <button id="twitter-share-button"><i class="fab fa-twitter"></i>ツイートする</button>
+        <div class="tweet mt-5" id="tweet">
+            <button id="twitter-share-button"><i class="fab fa-twitter"></i>結果をツイートする</button>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
+
+        <h3 class="advice mt-5">ぴよぴよエンジニア卒業を目指して、今日もこつこつ🐓</h3>
 
         <script type="text/javascript" src="../static/js/script.js"></script>
     </div>

@@ -12,18 +12,46 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css')}}">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet"> -->
+        <!-- 検索関連 -->
+        <meta name="keywords" content="ぴよぴよエンジニア">
+        <meta name="description" content="ぴよぴよエンジニア診断は、未経験からバックエンドエンジニアになる人向けの学習項目チェックリストです。たった1分であなたの学習到達度がわかります。">
+        <meta name="author" content="© 2022 ぴよぴよエンジニア">
+        <link rel="canonical" href="https://piyopiyo-engineer.net/">
+
+        <!-- SNS関連 -->
+        <!-- ogp -->
+        <meta property="og:locale" content="ja_JP">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="ぴよぴよエンジニア診断">
+        <meta property="og:description" content="ぴよぴよエンジニア診断は、未経験からバックエンドエンジニアになる人向けの学習項目チェックリストです。たった1分であなたの学習到達度がわかります。">
+        <meta property="og:image" content="https://piyopiyo-engineer.net/static/img/sns.svg">
+        <meta property="og:image:alt" content="ぴよぴよエンジニア診断">
+        <meta property="og:url" content="https://piyopiyo-engineer.net/">
+        <meta property="og:site_name" content="ぴよぴよエンジニア診断">
+        <!-- facebook -->
+        <meta property="fb:app_id" content="https://piyopiyo-engineer.net/static/img/sns.svg">
+        <!-- twitter card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://piyopiyo-engineer.net/">
+        <meta name="twitter:title" content="ぴよぴよエンジニア診断"/>
+        <meta name="twitter:description" content="ぴよぴよエンジニア診断は、未経験からバックエンドエンジニアになる人向けの学習項目チェックリストです。たった1分であなたの学習到達度がわかります。" />
+        <meta name="twitter:image:src" content="https://piyopiyo-engineer.net/static/img/sns.svg">
+        <meta name="twitter:site" content="ぴよぴよエンジニア診断" />
+        <!-- <meta name="twitter:creator" content="@shigoto_cafe"> -->
+
+        <!-- icon -->
+        <link rel="favicon" href="{{url_for('static', filename='img/favicon.ico')}}">
+        <link rel="apple-touch-icon" href="{{url_for('static', filename='img/apple-touch-icon.svg')}}">
+        <link rel="icon" type="image/png" href="{{url_for('static', filename='img/android-chrome-192x192.svg')}}">
 
     </head>
     <body>
         {% block content %}
         {% endblock %}
         <footer>
-            <div class="container">
+            <div class="footer">
                 <!-- <p class="icons"><a href="https://www.flaticon.com/free-icons/chick" title="chick icons">Chick icons created by Freepik - Flaticon</a></p> -->
-                <p class="copyright">Copyright &copy; 2022 ぴよぴよエンジニア ALL Rights Reserved.</p>
+                <p class="copyright">&copy; 2022 ぴよぴよエンジニア</p>
             </div>
         </footer>
     </body>

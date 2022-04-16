@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* ===========================
 common
 ============================ */
@@ -7,7 +9,7 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px ;
-    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -26,13 +28,9 @@ a {
     color: black;
 }
 
-a:hover {
-    opacity: 0.7;
-}
-
 h1 {
     text-align: center;
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 62px;
 }
@@ -57,7 +55,7 @@ main
 .main {
     background-image:url(../img/background.png);
     background-size: cover;
-    height: 716px;
+    /* height: 716px; */
 }
 
 .main-copy {
@@ -82,6 +80,7 @@ h2 {
     font-size: 32px;
     font-weight: bold;
     text-align: center;
+    margin: 32px 0;
 }
 
 button {
@@ -106,8 +105,9 @@ button {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-button {
-    margin: 0 auto;
+button:hover {
+    opacity: 0.7;
+    text-decoration: none;
 }
 
 button a {
@@ -116,8 +116,28 @@ button a {
     font-weight: 800;
 }
 
+.dm-5 a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.title a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+.button:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
 .title {
     font-size: 18px;
+}
+
+.diagnose {
+    text-align:  center; 
 }
 
 /* ===========================
@@ -128,14 +148,11 @@ question
     font-size: 20px;
 }
 
-/* .lists {
-    position: absolute;
-} */
-/* 
-.checklists {
-    position: relative;
-    left: 200px;
-} */
+.lists {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+}
 
 .list {
     font-size: 24px;
@@ -145,6 +162,15 @@ input[type=checkbox] {
 	transform: scale(2.5);
 	margin: 0 15px 12px 0;
 }
+
+.button_cover {
+    text-align:  center; 
+}
+
+.tweet {
+    text-align:  center; 
+}
+
 
 /* ===========================
 answer
@@ -173,12 +199,59 @@ footer {
     height: 52px;
 }
 
-.icons {
-    float: left;
+.copyright {
     line-height: 52px;
 }
 
-.copyright {
-    float: right;
-    line-height: 52px;
+/* ===========================
+スマホ版
+============================ */
+
+@media only screen and (max-width: 1250px) {
+    /* ===========================
+    common
+    ============================ */
+
+    h1 {
+        font-size: 28px;
+    }
+
+
+    .checklists {
+        display: flex;
+        align-items: center;
+    }
+
+    .main {
+        padding: 12px;
+    }
+
+    .container {
+        width: 100%;
+    }
+    
+    .lists {
+        width: 100%;
+    }
+
+    .list {
+        font-size: 20px;
+    }
+
+    input[type=checkbox] {
+        transform: scale(2);
+        margin: 0 15px 0px 0;
+    }
+
+    .button {
+        width: 180px;
+    }
+
+    .result_text {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
 }
