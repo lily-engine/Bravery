@@ -14,5 +14,5 @@ app.service
 *.log
 .DS_Store
 
-model.py
 mysql.txt
+app/rds_config.py
