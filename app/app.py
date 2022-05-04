@@ -19,6 +19,7 @@ def get():
 
 @app.route('/result', methods=['POST'])
 def post():
+	question_lists = model.question_info()
 	checkbox = request.form.getlist('checkbox')
 	checkbox_count = len(checkbox)
 	percentage = math.floor(checkbox_count / 10 * 100)
@@ -26,7 +27,8 @@ def post():
 		title = '診断結果', \
 		checkbox_count = checkbox_count, \
 		checkbox = checkbox, \
-		percentage = percentage)
+		percentage = percentage, \
+		question_lists = question_lists)
 
 @app.route('/terms')
 def terms_of_service():

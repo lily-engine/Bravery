@@ -14,7 +14,6 @@ def question_info():
         sql = "SELECT * FROM question_lists"
         cursor.execute(sql)
         results = cursor.fetchall()
-        print(results)
 
     connect.close()
     return results
