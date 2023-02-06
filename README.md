@@ -48,9 +48,6 @@
 - ### その他
   - チーム開発を意識し、GitHubを使った開発を実施している点。
 
-# クラウドアーキテクチャー
-後日追加
-
 ## 機能一覧
 - チェックリストを使った診断機能
 - 診断結果のツイート機能
@@ -58,6 +55,5 @@
 
 # 作成者
 Yuriko Kikuchi（菊池百合子）
-- Twtter：　[@lily_engine](https://twitter.com/lily_engine)
 
 Icons made by [Chick icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/chick)
