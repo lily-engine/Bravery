@@ -4,12 +4,11 @@
 
 ■ リンク：https://piyopiyo-engineer.net/<br>
 登録不要で、1分で使えるアプリです。お気軽に遊びに来てください🐣<br>
+<br>
 -> 2023/02 公開終了しました。
 
 <img width="1440" alt="スクリーンショット 2023-02-05 8 04 16" src="https://user-images.githubusercontent.com/87489595/216883808-6eb966c3-f9b1-4061-86b4-fe3f58eaa360.png">
-
 <img width="1440" alt="スクリーンショット 2023-02-05 8 04 37" src="https://user-images.githubusercontent.com/87489595/216883815-5f7ff9df-38a1-477f-a405-36739477a1bd.png">
-
 <img width="1440" alt="スクリーンショット 2023-02-05 8 04 44" src="https://user-images.githubusercontent.com/87489595/216883821-98396507-4219-4e8d-bc03-62d796caad1a.png">
 
 ## アプリの特徴
@@ -35,7 +34,7 @@
 - Gunicorn
 
 ## その他
-- Git/GitHub
+- git/GitHub
 - VSCode
 
 # 特に見ていただきたい点
